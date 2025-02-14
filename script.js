@@ -1,8 +1,14 @@
 // your code here
- document.getElementById("myform").addEventListener("submit",function(event) {
- 	event.preventDefault(); 
+document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            
+            let nameValue = document.getElementById("name").value;
+            let yearValue = document.getElementById("year").value;
 
-	 let value = ducument.getElementById("name").value;
-	 let vlue2 = document.getElementById("year").value;
- let updatedUrl = `https://localhost:8080/?name=${encodeURIComponent(nameValue)}&year=${encodeURIComponent(yearValue)}`; })
- document.getElementById("url").textContent = updatedUrl;
+            
+            let updatedUrl = `https://localhost:8080/?name=${encodeURIComponent(nameValue)}&year=${encodeURIComponent(yearValue)}`;
+
+            
+            document.getElementById("url").textContent = updatedUrl;
+        });
